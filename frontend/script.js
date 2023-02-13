@@ -12,7 +12,7 @@ function loader(element){
   loadInterval = setInterval(() =>{
     element.textContent += '.';
 
-    if(element.textContent === '............'){
+    if(element.textContent === '....'){
       element.textContent='';
 
     }
@@ -74,7 +74,7 @@ const handleSubmit = async (e) => {
 
   loader(messageDiv);
 
-  const response = await fetch('http://localhost:5000', {
+  const response = await fetch('https://cortexa.shoto.cloud', {
     method: 'POST',
     headers:{
       'Content-Type': 'application/json'
