@@ -9,19 +9,8 @@ dotenv.config();
 
 
 
-const hostname = '127.0.0.1';
-const port = 3000;
-
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World! From OpenLiteSpeed NodeJS\n');
-});
-
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://:/`);
-});
-
+const hostname = "127.0.0.1";
+const port = process.env.port || 5000;
 
 
 
@@ -62,5 +51,13 @@ try{
 }
 })
 
-app.listen(5000, () => console.log('Server is running on port http://localhost:5000'));
+const server = app.listen(5000,hostname, () => console.log('Server is running on port http://localhost:5000'));
+
+process.on('SIGINT', stop);
+process.on('SIGTERM', stop);
+
+function stop(){
+  server.close();
+  process.exit();
+}
 
