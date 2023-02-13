@@ -2,11 +2,12 @@ import express from "express";
 import * as dotenv from 'dotenv';
 import cors from 'cors';
 import { Configuration, OpenAIApi } from "openai";
+import http from "http";
 
 dotenv.config();
 
-console.log
-const http = require('http');
+
+
 
 const hostname = '127.0.0.1';
 const port = 3000;
