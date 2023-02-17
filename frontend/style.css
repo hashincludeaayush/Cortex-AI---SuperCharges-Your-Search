@@ -137,6 +137,7 @@ textarea {
 button {
   outline: 0;
   border: 0;
+  padding: 10px 10px 50px 10px;
   cursor: pointer;
   background: transparent;
 }
