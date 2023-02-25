@@ -10,7 +10,7 @@
 #app {
   width: 100vw;
   height: 100vh;
-  background: #312222;
+  background-image: linear-gradient(to top left, rgba(233,100,121,1), rgba(130,0,0,1));
 
   display: flex;
   flex-direction: column;
